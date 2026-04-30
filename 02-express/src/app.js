@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { config } from "./config.js";
 import productRoutes from "./routes/product.routes.js";
-import userRoutes from "./routes/user.routes.js";
 import { notFound, errorHandler } from "./middlewares/error.middleware.js";
 
 dotenv.config();
@@ -17,7 +16,6 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.json({ message: "API is running" }));
 app.use("/api/products", productRoutes);
-app.use("/api/users", userRoutes);
 
 // Error handling middleware (after routes)
 app.use(notFound);
