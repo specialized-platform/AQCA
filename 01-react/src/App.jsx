@@ -6,6 +6,9 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import "./App.css";
+import Register from "./pages/Register.jsx";
+import Login from "./pages/Login.jsx";
+import Me from "./pages/Me.jsx";
 
 function App() {
   return (
@@ -14,6 +17,11 @@ function App() {
         <Header />
         <main className="main-content">
           <Routes>
+            <Route path="/me" element={<Me/>} />
+
+
+            <Route path="/register" element={<Register/>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />
