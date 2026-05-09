@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-
-const API_URL = 'http://localhost:5001/api';
-
+import {API_URL} from "../utils/api.js";
 
 const Register = () => {
     const navigate = useNavigate();

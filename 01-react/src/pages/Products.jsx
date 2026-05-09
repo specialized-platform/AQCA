@@ -3,6 +3,7 @@ import ProductCard from "../components/ProductCard";
 import { useNavigate } from "react-router-dom";
 import "./products.css";
 import axios from "axios";
+import {API_URL} from "../utils/api.js";
 
 const data = Array.from({ length: 8 }).map((_, i) => ({
   id: i + 1,
@@ -10,9 +11,6 @@ const data = Array.from({ length: 8 }).map((_, i) => ({
   price: 100000 + i * 25000,
   image: `https://picsum.photos/seed/prod${i}/600/400`,
 }));
-
-
-const API_URL = 'http://localhost:5001/api';
 
 export default function Products() {
     const [products, setProducts] = useState([]);
